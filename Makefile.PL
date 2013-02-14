@@ -9,20 +9,25 @@ use ExtUtils::MakeMaker 6.30;
 
 
 my %WriteMakefileArgs = (
-  'ABSTRACT' => 'templating system for marc records',
-  'AUTHOR' => 'Marc Chantreux <khatar@phear.org>',
-  'BUILD_REQUIRES' => {},
-  'CONFIGURE_REQUIRES' => {
-    'ExtUtils::MakeMaker' => '6.30'
+  "ABSTRACT" => "templating system for marc records",
+  "AUTHOR" => "Marc Chantreux <khatar\@phear.org>",
+  "BUILD_REQUIRES" => {
+    "Test::More" => 0
   },
-  'DISTNAME' => 'marc-mir-template',
-  'EXE_FILES' => [],
-  'LICENSE' => 'perl',
-  'NAME' => 'marc::mir::template',
-  'PREREQ_PM' => {},
-  'VERSION' => '0.0',
-  'test' => {
-    'TESTS' => 't/*.t'
+  "CONFIGURE_REQUIRES" => {
+    "ExtUtils::MakeMaker" => "6.30"
+  },
+  "DISTNAME" => "marc-mir-template",
+  "EXE_FILES" => [],
+  "LICENSE" => "perl",
+  "NAME" => "marc::mir::template",
+  "PREREQ_PM" => {
+    "Modern::Perl" => 0,
+    "YAML" => 0
+  },
+  "VERSION" => "0.1",
+  "test" => {
+    "TESTS" => "t/*.t"
   }
 );
 
